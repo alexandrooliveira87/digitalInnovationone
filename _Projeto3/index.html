@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Wikipedia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="logo">
+    
+            <img src="assets/images/Santos.png" width="200"/>
+           
+      
+</header>
+<main>
+    
+</main>
+    <div class="bar"></div>
+
+    <div class="content">
+        <div class="sidebar">
+            <h2>Conteúdo</h2>
+            <ul>
+                <li><a href="https://pt.wikipedia.org/wiki/Santos_Futebol_Clube#Hist%C3%B3ria">História</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Santos_Futebol_Clube#S%C3%ADmbolos">Simbolo</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Santos_Futebol_Clube#Torcida">Torcida</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Santos_Futebol_Clube#Rivalidades">Rivalidade</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Santos_Futebol_Clube#T%C3%ADtulos">Titulos</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Santos_Futebol_Clube#Estat%C3%ADsticas">Estatisticas</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Santos_Futebol_Clube#%C3%8Ddolos">Idolos</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <p>Buscar</p>
+            <input type="text" id="busca"><br>
+            
+            <script>
+                var searchfield = document.getElementById('busca');
+                var descriptionObject = document.getElementById('descricao')
+                var textToSearch = descriptionObject.innerHTML;
+    
+                function realizaBusca(busca){
+                    const regex = new RegExp(`(${busca})(?!(.(?!<mark))*</mark>)+`, 'ig');
+                    const ocurrences = textToSearch.match(regex);
+                    descriptionObject.innerHTML = textToSearch.replace(regex, `<mark>${busca}</mark>`)
+                }
+    
+                searchfield.addEventListener('keyup', (e) => realizaBusca(e.target.value));
+            </script>
+
+            <h1 id="descricao">Santos Futebol Clube</h1>
+            <p id="descricao">Santos Futebol Clube é um clube poliesportivo brasileiro da cidade de Santos, São Paulo. Foi fundado em 14 de abril de 1912, suas cores iniciais seriam o branco, azul e dourado, mas um ano após a sua fundação, ficou decidido que as cores do clube passariam a ser branco e preto. Manda as suas partidas no Estádio Urbano Caldeira, mais conhecido como Vila Belmiro. Seus maiores rivais no futebol são o Palmeiras, com quem disputa o Clássico da Saudade; o Corinthians, com quem disputa o Clássico Alvinegro; e o São Paulo, com quem disputa o San-São.</p>
+            <p id="descricao">O Santos tornou-se no futebol um dos clubes mais bem-sucedidos do Brasil e reconhecidos mundialmente. Ficou famoso na década de 60 pelos vários títulos internacionais e nacionais conquistados e por ter revelado Pelé, considerado por muitos como o maior jogador da história do esporte, e segundo a FIFA, o melhor jogador do século XX, além disso, também tem o marco de maior artilheiro da história do Santos e da Seleção Brasileira. Abaixo de Pelé com 77 gols pela seleção em jogos oficiais, está também outro jogador revelado pelo clube, Neymar.</p>
+            <p id="descricao">Ao longo de sua história,[19] o Santos conquistou um grande número de títulos internacionais,[20] com destaque para os Mundiais de 1962 e 1963, as Copas Libertadores de 1962,[21] 1963[22] e 2011[23] (recordista brasileiro ao lado de Flamengo, Grêmio, Palmeiras e São Paulo), a Recopa dos Campeões Intercontinentais de 1968,[24][25][26] a Supercopa Sul-Americana dos Campeões Intercontinentais de 1968, a Copa Conmebol de 1998 e a Recopa Sul-Americana de 2012.[27] No cenário nacional é octacampeão brasileiro nos anos de 1961, 1962, 1963, 1964, 1965, 1968, 2002 e 2004.[28] Ainda no âmbito nacional, o clube possui uma Copa do Brasil vencida em 2010, totalizando nove conquistas nacionais. Outros títulos importantes incluem cinco Torneios Rio-São Paulo (recordista ao lado de Corinthians e Palmeiras), 22 Campeonatos Paulistas e a Copa Paulista de 2004.[29] Na somatória de títulos oficiais de abrangência internacional e nacional,[30] o clube possui 17 conquistas. Ao todo, somando competições oficiais, amistosas e outras taças, o clube possui 305 títulos.[31][32] O Santos, junto com Palmeiras, Cruzeiro e Internacional, foi um dos únicos a vencer o Campeonato Brasileiro de forma invicta, em 1963, 1964 e 1965<p>
+        
+            <h1 id="descricao">História</h1>
+            <hr>
+            <p id="descricao">O Santos Futebol Clube foi fundado no dia 14 de abril de 1912,[43][44][45][46] por iniciativa de três esportistas da cidade, Francisco Raymundo Marques, Mário Ferraz de Campos e Argemiro de Souza Júnior, que convocaram uma assembleia na sede do Clube Concórdia[47] para a criação de um time de futebol.[48] Durante a reunião, surgiu a dúvida quanto ao nome que seria dado a essa agremiação, várias sugestões apareceram como, Brasil Atlético, Euterpe e Concórdia, mas os participantes da reunião decidiram por unanimidade a proposta de Edmundo Jorge de Araújo: a denominação Santos Foot-Ball Club.[49]</p>
+            <p id="descricao">A primeira diretoria foi composta por:</p>
+           
+            <ul>
+               <li id="descricao">Presidente – Sizino Patusca</li>
+               <li id="descricao">Vice-presidente – George Cox</li>
+               <li id="descricao">Secretários – José Martins e Raul Dantas</li>
+               <li id="descricao">VTesoureiros – Leonel Silva e Dario Frota/li>
+             
+            </ul>
+            
+            <h1 id="descricao">Estrutura e patrimônio</h1>
+            <hr>
+            <h2 id="descricao">Estádio da Vila Belmiro</h2>
+            <p id="descricao">Antes de ter seu campo, o Santos FC chegou a mandar seus jogos em três locais diferentes: Campo da Avenida Ana Costa, Campo da Avenida Conselheiro Nébias e o Campo do Clubes dos Ingleses. Os treinos eram feitos em um campo distinto, localizado no Bairro do Macuco.[142] Em 1915 os dirigentes passaram a procurar terrenos na cidade. Em 31 de maio de 1916, uma assembleia geral aprovou a compra de uma área de 16 650 metros quadrados, no bairro da Vila Belmiro, aprovado pelo presidente do clube, Agnello Cícero de Oliveira. A compra do terreno foi feita em 16 de junho de 1916.</p>
+            <p id="descricao">A construção do Estádio Urbano Caldeira, a Vila Belmiro, foi concluída em 1916 e sua inauguração ocorreu em 12 de outubro do mesmo ano, mas a primeira partida foi realizada somente 10 dias depois, em 22 de outubro de 1916, válido pelo Campeonato Paulista. A partida de estreia foi entre Santos e Ypiranga, onde o Santos venceu por 2 a 1, cujo primeiro gol da partida e da história do estádio foi feito por Adolpho Millon Júnior, da equipe santista.</p>
+            <p id="descricao">O primeiro sistema de iluminação foi estreado em 21 de março de 1931, às oito horas da noite, num jogo amistoso entre o Santos FC e uma seleção de futebol que a cidade de Santos possuía na época. O amistoso terminou empatado em 1 a 1, com gol de Manoel Cruz para a Seleção Santista e Camarão para o Santos FC</p>
+            <p id="descricao">Em 1933, com a morte de Urbano Caldeira que tinha sido jogador, treinador e dirigente do clube, o estádio foi batizado oficialmente de Estádio Urbano Caldeira em sua homenagem.</p>
+            <p id="descricao">O recorde de público no estádio foi no dia 20 de setembro de 1964, num clássico contra o Corinthians, 32 986 pessoas estavam presentes para ver o jogo. Entretanto esse dia quase foi trágico, cerca de 10 minutos depois do apito inicial do juiz, uma das arquibancadas do estádio cai e fere 181 pessoas.[147] O jogo foi interrompido para atendimento das vítimas e foi remarcado para 10 dias depois no Estádio do Pacaembu, onde terminou empatado em 1 a 1.</p>
+            <figure><img src="assets/images/vila.jpg" alt="Figura da vila Belmirio"><figcaption>Vila Belmirio</figcaption> </figure>
+        
+        </div>
+
+        <div class="anchors">
+            <h2>Outros Links</h2>
+            <ul>
+                <li><a href="https://www.santosfc.com.br/">Site do Clube</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Esta página foi editada pela última vez às 14h14min de 21 de outubro de 2022.</p>
+        <p>Este texto é disponibilizado nos termos da licença Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC BY-SA 3.0) da Creative Commons; pode estar sujeito a condições adicionais. Para mais detalhes, consulte as condições de utilização.</p>
+
+    </div>
+</body>
+</html>
