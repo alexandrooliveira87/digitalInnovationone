@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags Html 5 - Estrutural</title>
+
+<style>
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+
+    }
+    nav ul li a{
+        padding: 10px 15px;
+        color: blue;
+        text-decoration: none;
+    }
+    nav ul li a:hover{
+        color: white;
+        background:blue ;
+        border-radius: 5px;;
+    }
+    header kbd{
+        border: solid 1px black;
+    }
+    header code{
+        background-color: #f1f1f1;
+        color: red;
+    }
+</style>
+
+</head>
+<body>
+    
+    <header>
+
+        <p>Buscar</p>
+        <input type="text" id="busca"><br>
+        <p id="descricao">Recife, a capital do estado de Pernambuco, no nordeste do Brasil, distingue-se pelos seus vários rios, pontes, ilhéus e penínsulas. Recife Antigo, na própria ilha junto ao porto, é o centro histórico da cidade antiga que data do século XVI. A sul, a popular Praia de Boa Viagem é protegida por recifes e está ladeada de blocos de apartamentos elevados, hotéis modernos e restaurantes.</p>
+
+        <script>
+            var searchfield = document.getElementById('busca');
+            var descriptionObject = document.getElementById('descricao')
+            var textToSearch = descriptionObject.innerHTML;
+
+            function realizaBusca(busca){
+                const regex = new RegExp(`(${busca})(?!(.(?!<mark))*</mark>)+`, 'ig');
+                const ocurrences = textToSearch.match(regex);
+                descriptionObject.innerHTML = textToSearch.replace(regex, `<mark>${busca}</mark>`)
+            }
+
+            searchfield.addEventListener('keyup', (e) => realizaBusca(e.target.value));
+        </script>
+
+
+
+        <meter max="100" min="0" value="65"></meter>
+
+        <progress id="progress" max="100" min="0" value="50"></progress>
+
+        <script>
+            var progress = document.getElementById('progress');
+            const interval = setInterval(() =>{
+                progress.value += 10;
+                if(progress.value >=100)
+                alert('carregamento realizado com sucesso')
+                    clearInterval(interval);
+            }, 1000);
+        </script>
+
+
+
+    <details>
+        <summary>Como troco a cor de fundo de um elemento no HTML?</summary>
+        <p>Para executar essa ação, utilize o commando <code>background-color</code> no CSS.</p>
+    </details>
+
+
+
+
+        <p>Para copiar está informação, presione <kbd><b>CTRL</b></kbd> + <kbd><b>C</b></kbd> </p>
+        <p>Para trocar o fundo de um elemento, utilize o comando <code>background-color</code></p>
+        <pre>
+            code{
+                background-color: #f1f1f1;
+               }
+        </pre>
+        
+        <nav>
+            <ul>
+                <li><a href="#">ITEM 1</a></li>
+                <li><a href="#">ITEM 2</a></li>
+                <li><a href="tel:+5571997304709">TELEFONE</a></li>
+            </ul>
+        </nav>
+
+        <h3>Digite o Navegador</h3>
+        <input list="browsers" type="search" name="search"/>
+        <datalist id="browsers">
+        <option >Chrome</option>
+        <option >Mozila firefox</option>
+        <option >Microsoft Edge</option>
+        <option >Safari</option>
+        <option >Opera</option>
+        </datalist>
+        
+        <h3>Escolha o Navegador</h3>
+       <select name="browsers" >
+        <option value="">Selecione um navegador</option>
+        <option value="Chrome">Chrome</option>
+        <option value="firefox">Mozila firefox</option>
+        <option value="edge">Microsoft Edge</option>
+        <option value="safari">Safari</option>
+        <option value="opera">Opera</option>
+       </select>
+    </header>
+
+
+    <main></main>
+    
+    
+    <footer></footer>
+
+
+
+</body>
+</html>
