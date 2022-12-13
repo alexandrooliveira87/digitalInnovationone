@@ -1,0 +1,46 @@
+body{
+    background: black;
+    margin: auto;
+    width: 60%;
+    text-align: justify;    
+}
+
+div{
+   
+    color: white;
+    width: 800px;
+    margin: 2px 2px 2px 2px;
+    padding: 5PX;
+    
+    
+
+}
+
+#elemento-01{
+    background: orange;
+    margin: 10px;
+    height: 200px;
+    padding: 15PX;
+    
+  
+}
+
+#elemento-02{
+    background: rgb(10, 10, 107);
+    margin: 10px;
+    height: inherit;
+    padding: 15PX;
+   
+}
+figure img{
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+
+#redes-sociais img {
+  width: 30px;
+  margin: -5px 0px 0px 0px;
+    
+}
